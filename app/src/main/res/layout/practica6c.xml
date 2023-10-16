@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Trasformer"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/transformers"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/Cartel"
+        android:layout_width="180dp"
+        android:layout_height="193dp"
+        app:layout_constraintBottom_toBottomOf="@id/Trasformer"
+        app:layout_constraintTop_toBottomOf="@+id/Trasformer"
+        app:srcCompat="@drawable/transformers_cartel" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="12dp"
+        android:text="         Transformer: el despertar de la bestias "
+        app:layout_constraintStart_toStartOf="@id/Cartel"
+        app:layout_constraintTop_toBottomOf="@+id/Trasformer" />
+
+    <ImageView
+        android:id="@+id/Compartir"
+        android:layout_width="33dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/titulo"
+        app:layout_constraintTop_toBottomOf="@+id/Trasformer"
+        app:srcCompat="@drawable/ic_share_black_24dp" />
+
+    <TextView
+        android:id="@+id/Alquilar"
+        android:layout_width="129dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="#000000"
+        android:text="            Alquilar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cartel" />
+
+    <TextView
+        android:id="@+id/Comprar"
+        android:layout_width="126dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="55dp"
+        android:text="         Comprar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Alquilar"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#DC0707"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Alquilar"
+        app:srcCompat="@drawable/ic_play_arrow_black_24dp"
+        app:tint="#000000" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/compartir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#03A9F4"
+        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@+id/Play"
+        app:layout_constraintTop_toBottomOf="@+id/Alquilar"
+        app:srcCompat="@drawable/ic_family"
+        app:tint="#000000" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FAEFBD"
+        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@+id/compartir"
+        app:layout_constraintTop_toBottomOf="@+id/Comprar"
+        app:srcCompat="@drawable/tomato"
+        app:tint="#000000" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Pantalla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#47A14B"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton3"
+        app:layout_constraintTop_toBottomOf="@+id/Comprar"
+        app:srcCompat="@android:drawable/dialog_holo_dark_frame"
+        app:tint="#000000" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="244dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/Descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripcion de la pelicula"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.151" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
